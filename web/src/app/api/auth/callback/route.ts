@@ -14,6 +14,8 @@ export async function GET(request: NextRequest) {
 
   const { token } = registerResponse.data
 
+  // if the user was trying to access a specific page, redirect them there
+  // otherwise redirect them to the home page
   const redirectURL = redirectTo ?? new URL('/', request.url)
 
   const cookieExpiresInSeconds = 60 * 60 * 24 * 30

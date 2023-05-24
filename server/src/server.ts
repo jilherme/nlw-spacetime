@@ -3,8 +3,8 @@ import 'dotenv/config'
 import cors from '@fastify/cors'
 import jwt from '@fastify/jwt'
 import fastify from 'fastify'
-
 import { resolve } from 'node:path'
+
 import { authRoutes } from './routes/auth'
 import { memoriesRoutes } from './routes/memories'
 import { uploadRoutes } from './routes/upload'
